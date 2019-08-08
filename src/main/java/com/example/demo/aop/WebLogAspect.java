@@ -43,7 +43,7 @@ public class WebLogAspect {
 
     @AfterReturning(returning = "dataSet", pointcut = "webLog()")
     public void doAfterReturning(Object dataSet) throws Throwable {
-        // 处理完请求，返回内容
+        // after controller, return dataset
         logger.info("RESPONSE : " + dataSet);
     }
 }
