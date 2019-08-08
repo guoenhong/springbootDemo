@@ -12,9 +12,7 @@ public class FreeMarkerController {
     public String ftlIndex(Map<Object,Object> map){
         map.put("name","zhangsan");
         map.put("age",20);
-        map.put("sex","男");
-        map.put("score",200);
-        map.put("hobby","sport");
+        map.put("sex","女");
         return "ftlIndex";
     }
 }

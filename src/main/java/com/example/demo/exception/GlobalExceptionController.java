@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,16 +15,16 @@ public class GlobalExceptionController {
 
 
     @ExceptionHandler(RuntimeException.class)
-    @ResponseBody
-    public String exceptionTest(Exception ex){
-        /*Map<Object,Object> errorMsg = new HashMap<Object, Object>();
-        errorMsg.put("errorCode",500);
-        errorMsg.put("errorMsg","系统错误,请联系管理员!");*/
+    //@ResponseBody
+    public Object exceptionTest(Exception ex){
+        LOGGER.error("ERROR Message : ",ex);
 
-        LOGGER.debug("我是debug");
-        LOGGER.info("我是info");
-        LOGGER.error("我是error,我的错误信息 : ",ex);
-
-        return "系统错误,请联系管理员!";
+        Map<String,Object> errorMsg = new HashMap<String, Object>();
+        errorMsg.put("Code",500);
+        errorMsg.put("Msg","系统错误,请联系管理员!");
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addAllObjects(errorMsg);
+        modelAndView.setViewName("errorMsg");
+        return modelAndView;
     }
 }
