@@ -7,8 +7,7 @@
 	<body>
 		<h1>${Code}</h1>
 		<h2>${Msg}</h2>
-		
+
 	</body>
 </html>
-
 
