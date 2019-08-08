@@ -21,7 +21,7 @@ public class GlobalExceptionController {
 
         Map<String,Object> errorMsg = new HashMap<String, Object>();
         errorMsg.put("Code",500);
-        errorMsg.put("Msg","系统错误,请联系管理员!");
+        errorMsg.put("Msg","System Error,please contact Administrator!");
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addAllObjects(errorMsg);
         modelAndView.setViewName("errorMsg");
