@@ -1,0 +1,9 @@
+spring:
+  devtools:
+    restart:
+      exclude: static/**,templates/**
+      enabled: true
+
+
+  freemarker:
+    cache: false
