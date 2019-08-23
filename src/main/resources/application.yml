@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: dev
+  devtools:
+    restart:
+      exclude: static/**,templates/**
+      enabled: true
+
+
+  freemarker:
+      cache: false
