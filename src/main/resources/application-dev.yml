@@ -1,0 +1,7 @@
+name: Frank
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/devdb?serverTimezone=UTC
+    username: root
+    password: 813552168
+    driver-class-name: com.mysql.cj.jdbc.Driver
