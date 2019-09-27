@@ -1,4 +1,4 @@
-package com.example.demo.mapper;
+package com.example.demo.dev2.mapper;
 
 import com.example.demo.pojo.User;
 import org.apache.ibatis.annotations.Insert;
@@ -12,5 +12,5 @@ public interface UserMapper2 {
     User findByName(@Param("name") String name);
 
     @Insert("insert into user_info(name,sex) values(#{name}, #{sex})")
-    int insertUser(@Param("name") String name,@Param("sex") String sex);
+    int insertUser(@Param("name") String name, @Param("sex") String sex);
 }

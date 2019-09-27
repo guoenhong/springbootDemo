@@ -1,7 +1,10 @@
-package com.example.demo.mapper;
+package com.example.demo.dev1.mapper;
 
 import com.example.demo.pojo.User;
-import org.apache.ibatis.annotations.*;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 @Mapper
 public interface UserMapper {

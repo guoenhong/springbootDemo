@@ -1,15 +1,21 @@
 name: Frank
-dafault_datasource_name: devdb
+#dafault_datasource_name: devdb
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/devdb?serverTimezone=UTC
-    username: root
-    password: 813552168
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    dev1:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/devdb?serverTimezone=UTC
+      username: root
+      password: 813552168
+    dev2:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/devdb2?serverTimezone=UTC
+      username: root
+      password: 813552168
 
-customer:
-  datasource:
-    url: jdbc:mysql://localhost:3306/devdb2?serverTimezone=UTC
-    username: root
-    password: 813552168
-    driver-class-name: com.mysql.cj.jdbc.Driver
+#spring:
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/devdb?serverTimezone=UTC
+#    username: root
+#    password: 813552168
+#    driver-class-name: com.mysql.cj.jdbc.Driver
